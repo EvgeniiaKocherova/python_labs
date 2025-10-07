@@ -19,6 +19,8 @@ def get_initials(full_name):
     s = ''
     if len(parts) == 1:
         raise ValueError("неполностью задано фио")
+    if len(parts) > 3:
+        raise ValueError("Неправильно количество элементов")
     for i in range(len(parts)):
         if i == 0:
             s += parts[i][0].upper() + parts[i][1:] + " "
