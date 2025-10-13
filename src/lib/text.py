@@ -3,7 +3,7 @@ def print_arg_ret(func, *a, **kwargs):
     Эта функция пишет аргументы (a) и возвращаемое значение функции (func)
     Используется для отладки тест-кейсов
     """
-    print(f'{a} -> ', end='')
+    print(f'{a} {kwargs} -> ', end='')
     r = func(*a, **kwargs)
     print(r)
     return r
