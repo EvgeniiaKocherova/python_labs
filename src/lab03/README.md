@@ -78,7 +78,7 @@ def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
     return res[:n]
 
 ```
-![скриншот задания №1](./images/lab03/img01.png)
+![скриншот задания №1](../../images/lab03/img01.png)
 
 
 ## Задание b - src/text_stats.py
@@ -105,6 +105,6 @@ print(f"Топ-5:")
 for i in top_5:
     print(f"{i[0]}:{i[1]}")
 ```
-![скриншот задания №2](./images/lab03/img02.png)
+![скриншот задания №2](../../images/lab03/img02.png)
 
 
