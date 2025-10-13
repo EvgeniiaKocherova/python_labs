@@ -1,6 +1,9 @@
 m = int(input("Минуты: "))
 
-hours = m // 60
+days = m // 1440
+hours = int(((m / 1440) - days)*24)
+
 minutes = m % 60
 
-print(f"{hours}:{minutes:02d}")
+print(f"{days}:{hours}:{minutes:02d}")
+
