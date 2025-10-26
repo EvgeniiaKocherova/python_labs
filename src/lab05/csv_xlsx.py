@@ -3,9 +3,7 @@ from json_csv import *
 
 def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     """
-    Конвертирует CSV в XLSX.
-    Первая строка CSV — заголовок.
-    Колонки — автоширина по длине текста (не менее 8 символов).
+    Конвертирует CSV в XLSX. Колонки — автоширина по длине текста.
     """
 
     rows = get_csv_as_rows(csv_path)
