@@ -71,7 +71,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
 
 ![скриншот выполения тест-кейсов для задания A](../../images/lab05/img01.png)
 
-## Задание B — JSON ↔ CSV
+## Задание B — CSV -> XLSX
 
 Реализовала модуль src/lab05/csv_xlsx.py, который конвертирует csv-файл в xlsx.
 Вот код к этому заданию:
