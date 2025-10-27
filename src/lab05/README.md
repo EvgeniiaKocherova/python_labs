@@ -118,5 +118,8 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 ### Вот результат его выполнения:
 ![скриншот выполения тест-кейсов для задания B](../../images/lab05/img02.png)
 
-### Вот файл xlsx после обработки:
+### Вот файл cities.xlsx после обработки:
 ![xlsx-файл](../../images/lab05/img03.png)
+
+### Вот файл people.xlsx после обработки:
+![xlsx-файл](../../images/lab05/img04.png)
