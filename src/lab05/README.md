@@ -67,7 +67,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     with open(json_path, "w", newline='', encoding="utf-8") as f:
         json.dump(rows, f, ensure_ascii=False, indent=2)
 ```
-### Вот результат его выполнения:
+### Вот результат выполнения на тест-кейсах:
 
 ![скриншот выполения тест-кейсов для задания A](../../images/lab05/img01.png)
 
@@ -108,7 +108,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
                 pass
         if max_length < 8:
             max_length = 8
-            
+
 # Рассчитываем ширину колонки:
 # добавляем 2 символа к максимальной длине, чтобы оставить небольшой отступ,
 # и умножаем на 1.2 для более эстетичного отображения
@@ -119,7 +119,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     wb.save(xlsx_path)
 ```
 
-### Вот результат его выполнения:
+### Вот результат его выполнения на тест-кейсах:
 ![скриншот выполения тест-кейсов для задания B](../../images/lab05/img02.png)
 
 ### Вот файл cities.xlsx после обработки:
