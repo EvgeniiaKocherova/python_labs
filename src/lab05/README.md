@@ -57,6 +57,9 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     """
     Преобразует CSV в JSON. Значения сохраняются как строки.
     """
+    if not csv_path.endswith('.csv'):
+        raise ValueError("Неверный тип файла, файл должен иметь расширение csv")
+        
     rows = []
     
     with open(csv_path, newline="", encoding="utf-8") as f:
