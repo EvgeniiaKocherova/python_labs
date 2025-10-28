@@ -108,9 +108,13 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
                 pass
         if max_length < 8:
             max_length = 8
+            
+# Рассчитываем ширину колонки:
+# добавляем 2 символа к максимальной длине, чтобы оставить небольшой отступ,
+# и умножаем на 1.2 для более эстетичного отображения
 
         adjusted_width = (max_length + 2) * 1.2
-        ws.column_dimensions[column].width = adjusted_width
+        ws.column_dimensions[column].width = adjusted_width # Устанавливаем ширину текущей колонки равной рассчитанному значению
 
     wb.save(xlsx_path)
 ```
