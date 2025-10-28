@@ -27,6 +27,9 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     Поддерживает список словарей [{...}, {...}], заполняет отсутствующие поля пустыми строками.
     Кодировка UTF-8. Порядок колонок — как в первом объекте.
     """
+    if not json_path.endswith('.json'):
+        raise ValueError("Неверный тип файла, файл должен иметь расширение json")
+    
     with open(json_path, encoding="utf-8", newline="") as f:
         try:
             rows = json.load(f)

@@ -5,7 +5,9 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     """
     Конвертирует CSV в XLSX. Колонки — автоширина по длине текста.
     """
-
+    if not csv_path.endswith('.csv'):
+        raise ValueError("неверный тип файла, файл должен иметь расширение .csv")
+    
     rows = get_csv_as_rows(csv_path)
 
     if not rows:

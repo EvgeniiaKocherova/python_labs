@@ -32,6 +32,9 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     Поддерживает список словарей [{...}, {...}], заполняет отсутствующие поля пустыми строками.
     Кодировка UTF-8. Порядок колонок — как в первом объекте.
     """
+     if not json_path.endswith('.json'):
+        raise ValueError("Неверный тип файла, файл должен иметь расширение json")
+
     with open(json_path, encoding="utf-8", newline="") as f:
         try:
             rows = json.load(f)
@@ -84,7 +87,9 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     """
     Конвертирует CSV в XLSX. Колонки — автоширина по длине текста.
     """
-
+    if not csv_path.endswith('.csv'):
+        raise ValueError("неверный тип файла, файл должен иметь расширение .csv")
+    
     rows = get_csv_as_rows(csv_path)
 
     if not rows:
