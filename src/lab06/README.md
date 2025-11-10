@@ -99,18 +99,19 @@ def main():
     p3.add_argument("--out", dest="output", required=True, help="Итоговый xlsx файл")
 
     args = parser.parse_args()
-    print("cmd=", args.cmd)
-    print("input=", args.input)
-    print("output=", args.output)
 
-    if args.cmd == "json2csv":
-        json_to_csv(args.input, args.output)
-    
-    if args.cmd == "csv2json":
-        csv_to_json(args.input, args.output)
+    try:
+        if args.cmd == "json2csv":
+            json_to_csv(args.input, args.output)
+        
+        elif args.cmd == "csv2json":
+            csv_to_json(args.input, args.output)
 
-    if args.cmd == "csv2xlsx":
-        csv_to_xlsx(args.input, args.output)
+        else:
+            csv_to_xlsx(args.input, args.output)
+    except FileNotFoundError:
+        print(f"файл \"{args.input}\" не найден")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
@@ -119,3 +120,4 @@ if __name__ == "__main__":
 ### Вот выполнения всех подкоманд:
 ![скриншот выполения всех подкоманд](../../images/lab06/img03.png)
 
+![скриншот выполения всех подкоманд](../../images/lab06/img04.png)
