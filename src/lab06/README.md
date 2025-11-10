@@ -103,10 +103,8 @@ def main():
     try:
         if args.cmd == "json2csv":
             json_to_csv(args.input, args.output)
-        
         elif args.cmd == "csv2json":
             csv_to_json(args.input, args.output)
-
         else:
             csv_to_xlsx(args.input, args.output)
     except FileNotFoundError:
