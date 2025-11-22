@@ -1,17 +1,20 @@
 import pytest
 import sys
-sys.path.append("../src/lib")
-from text import * 
 
-@pytest.mark.parametrize("source,expected", 
+sys.path.append("../src/lib")
+from text import *
+
+
+@pytest.mark.parametrize(
+    "source,expected",
     [
-    ("ПрИвЕт\nМИр\t", "привет мир"),
-    ("ёжик, Ёлка", "ежик, елка"),
-    ("Hello\r\nWorld", "hello world"),
-    ("  двойные   пробелы  ", "двойные пробелы"),
-    ("", ""),  
-    ("   ", ""),
-    ],  
+        ("ПрИвЕт\nМИр\t", "привет мир"),
+        ("ёжик, Ёлка", "ежик, елка"),
+        ("Hello\r\nWorld", "hello world"),
+        ("  двойные   пробелы  ", "двойные пробелы"),
+        ("", ""),
+        ("   ", ""),
+    ],
 )
 def test_normalize(source, expected):
     assert normalize(source) == expected
@@ -36,9 +39,9 @@ def test_tokenize_basic(source, expected):
 @pytest.mark.parametrize(
     "tokens, expected",
     [
-        (["a","b","a","c","b","a"], {"a":3,"b":2,"c":1}),
-        (["bb","aa","bb","aa","cc"], {"aa":2,"bb":2,"cc":1}),
-        (["bb"], {"bb":1}),
+        (["a", "b", "a", "c", "b", "a"], {"a": 3, "b": 2, "c": 1}),
+        (["bb", "aa", "bb", "aa", "cc"], {"aa": 2, "bb": 2, "cc": 1}),
+        (["bb"], {"bb": 1}),
         ([], {}),
     ],
 )
@@ -58,4 +61,3 @@ def test_count_freq_and_top_n(tokens, expected):
 )
 def test_top_n(freq, n, expected):
     assert top_n(freq, n) == expected
-

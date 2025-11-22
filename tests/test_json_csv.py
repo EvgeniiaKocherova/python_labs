@@ -3,12 +3,12 @@ import csv
 import json
 from pathlib import Path
 import sys
+
 sys.path.append("../src/lab05")
 from json_csv import *
 
 
-
-#1
+# 1
 def test_json_to_csv_roundtrip(tmp_path: Path):
     src = tmp_path / "people.json"
     dst = tmp_path / "people.csv"
@@ -26,24 +26,24 @@ def test_json_to_csv_roundtrip(tmp_path: Path):
     assert {"name", "age"} <= set(rows[0].keys())
 
 
-#2
+# 2
 def test_csv_to_json_roundtrip(tmp_path: Path):
     src = tmp_path / "people.csv"
     dst = tmp_path / "people.json"
-    data = '''name,age,city
+    data = """name,age,city
 Alice,22,SPB
 Bob,25,Moscow
 Carlos,30,Kazan
 Dana,21,SPB
 Andrey,27,Novosibirsk
-'''
+"""
     expected = [
-  {"name": "Alice", "age": "22", "city": "SPB"},
-  {"name": "Bob", "age": "25", "city": "Moscow"},
-  {"name": "Carlos", "age": "30", "city": "Kazan"},
-  {"name": "Dana", "age": "21", "city": "SPB"},
-  {"name": "Andrey", "age": "27", "city": "Novosibirsk"}
-]
+        {"name": "Alice", "age": "22", "city": "SPB"},
+        {"name": "Bob", "age": "25", "city": "Moscow"},
+        {"name": "Carlos", "age": "30", "city": "Kazan"},
+        {"name": "Dana", "age": "21", "city": "SPB"},
+        {"name": "Andrey", "age": "27", "city": "Novosibirsk"},
+    ]
     src.write_text(data, encoding="utf-8")
     csv_to_json(str(src), str(dst))
 
@@ -53,7 +53,7 @@ Andrey,27,Novosibirsk
     assert len(csv_rows) - 1 == len(json_rows)
 
 
-#3
+# 3
 def test_json_to_csv_city(tmp_path: Path):
     src = tmp_path / "cities.json"
     dst = tmp_path / "cities.csv"
@@ -72,7 +72,7 @@ def test_json_to_csv_city(tmp_path: Path):
     assert {"name", "age", "city"} <= set(rows[0].keys())
 
 
-#4
+# 4
 def test_json_to_csv_empty(tmp_path: Path):
     src = tmp_path / "empty.json"
     dst = tmp_path / "empty.csv"
@@ -82,19 +82,19 @@ def test_json_to_csv_empty(tmp_path: Path):
         json_to_csv(str(src), str(dst))
 
 
-#5
+# 5
 def test_csv_to_json_no_file():
     with pytest.raises(FileNotFoundError):
         csv_to_json("nofile.csv", "output.json")
 
 
-#6
+# 6
 def test_json_to_csv_no_file():
     with pytest.raises(FileNotFoundError):
         json_to_csv("nofile.json", "output.csv")
 
 
-#7
+# 7
 def test_json_to_csv_wrong(tmp_path: Path):
     src = tmp_path / "wrong.json"
     dst = tmp_path / "wrong.csv"
@@ -104,7 +104,7 @@ def test_json_to_csv_wrong(tmp_path: Path):
         json_to_csv(str(src), str(dst))
 
 
-#8
+# 8
 def test_csv_to_json_wrong(tmp_path: Path):
     src = tmp_path / "wrong.csv"
     dst = tmp_path / "wrong.json"
