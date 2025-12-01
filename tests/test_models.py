@@ -58,8 +58,9 @@ class TestStudentValidation:
         with pytest.raises(ValueError):
             Student(fio="Иванов Иван", birthdate="2000-13-01", group="SE-01", gpa=4.5)
 
-#    def test_birthdate_future_date(self): ???
-
+    def test_birthdate_future_date(self):
+        with pytest.raises(ValueError):
+            Student(fio="Иванов Иван", birthdate="2026-12-01", group="SE-01", gpa=4.5)
 
     # Тесты для GPA
     def test_gpa_not_float(self):
