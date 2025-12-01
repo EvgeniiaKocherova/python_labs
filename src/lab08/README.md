@@ -153,7 +153,8 @@ class Student:
 
         return f"Студент: {self.fio}, Группа: {self.group}, GPA: {self.gpa}"
 ```
-Выполнение тестов:
+
+### Выполнение тестов:
 
 ![скриншот выполения тестов](../../images/lab08/img01.png)
 
@@ -221,7 +222,7 @@ def students_from_json(path):
 
     return students
 ```
-Выполнение тестов:
+### Выполнение тестов:
 
 ![скриншот выполения тестов](../../images/lab08/img02.png)
 
