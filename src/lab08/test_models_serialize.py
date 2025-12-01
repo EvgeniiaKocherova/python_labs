@@ -1,14 +1,5 @@
 import models
 import serialize
-import random
-
-names = ['Иван', 'Владимир', 'Иван', 'Михаил', 'Петр', 'Иван', 'Дмитрий', 'Петр', 'Егор']
-surnames = ['Иванов', 'Петров', 'Сидоров', 'Иванов', 'Иванов', 'Михайлов', 'Егоров', 'Петров', 'Сидоров']
-
-def gen_full_name():
-    name = names[random.randrange(len(names))]
-    surname = surnames[random.randrange(len(names))]
-    return f'{name} {surname}'
 
 students = [
     models.Student('Петр Иванов', '1990-01-01', 'SE-01', 4.0),
