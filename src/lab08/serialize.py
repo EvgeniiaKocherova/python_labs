@@ -33,7 +33,7 @@ def students_from_json(path):
         raise ValueError("неверный тип файла, файл должен иметь расширение json")
     
     if not json_file.exists(): 
-        raise FileNotFoundError(f"файл {path} не найден")
+        raise FileNotFoundError("файл не найден")
 
     with open(json_file, 'r', encoding='utf-8') as f:
         try:
