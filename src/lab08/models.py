@@ -52,7 +52,7 @@ class Student:
         year_part = self.birthdate[0:4]
         month_part = self.birthdate[5:7]
         day_part = self.birthdate[8:10]
-        if not(year_part.isdigit() or month_part.isdigit() or day_part.isdigit()):
+        if not(year_part.isdigit() and month_part.isdigit() and day_part.isdigit()):
             raise TypeError("Дата рождения может содержать только ццифры")
                 
         try:
