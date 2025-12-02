@@ -1,4 +1,4 @@
-# Мои лабараторный работы за 1 семестр
+# Мои лабараторные работы за 1 семестр
 * [Лабораторная работа 1](https://github.com/EvgeniiaKocherova/python_labs/tree/main/src/lab01)
 * [Лабораторная работа 2](https://github.com/EvgeniiaKocherova/python_labs/tree/main/src/lab02)
 * [Лабораторная работа 3](https://github.com/EvgeniiaKocherova/python_labs/blob/main/src/lab03/README.md)
