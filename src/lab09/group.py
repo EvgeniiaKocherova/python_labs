@@ -1,6 +1,8 @@
 import csv
+import sys
 from pathlib import Path
-from src.lab08.models import Student
+sys.path.append("../lab08")
+from models import Student
 
 class Group:
     def __init__(self, storage_path: str):
