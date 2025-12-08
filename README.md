@@ -7,5 +7,5 @@
 * [Лабораторная работа 6](https://github.com/EvgeniiaKocherova/python_labs/blob/main/src/lab06/README.md)
 * [Лабораторная работа 7](https://github.com/EvgeniiaKocherova/python_labs/blob/main/src/lab07/README.md)
 * [Лабораторная работа 8](https://github.com/EvgeniiaKocherova/python_labs/blob/main/src/lab08/README.md)
-* Лабораторная работа 9 - скоро будет
+* [Лабораторная работа 9](https://github.com/EvgeniiaKocherova/python_labs/blob/main/src/lab09/README.md)
 * Лабораторная работа 10 - скоро будет
