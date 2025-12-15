@@ -26,18 +26,18 @@ class SinglyLinkedList:
         self.head = new_node
         self._size += 1
     
-    def insert(self, ind, value):
-        if ind < 0 or ind > self._size:
+    def insert(self, idx, value):
+        if idx < 0 or idx > self._size:
             raise IndexError("Индекс вне диапазона")
         
-        if ind == 0:
+        if idx == 0:
             self.prepend(value)
-        elif ind == self._size:
+        elif idx == self._size:
             self.append(value)
         else:
             new_node = Node(value)
             current = self.head
-            for _ in range(ind - 1):
+            for _ in range(idx - 1):
                 current = current.next
             new_node.next = current.next
             current.next = new_node

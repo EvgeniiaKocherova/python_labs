@@ -153,7 +153,7 @@ def test_group():
         print(f"   {student.fio} - {student.gpa}")
 
 test_group()
-    
+    g
 ```
 
 ### csv-файл
