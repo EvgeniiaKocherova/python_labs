@@ -1,5 +1,5 @@
 import csv
-import json      
+import json   
 
 def get_json_as_rows(json_path: str):
     """
